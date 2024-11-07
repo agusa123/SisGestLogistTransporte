@@ -2,11 +2,13 @@ package org.yourcompany.yourproject;
 
 public class Paquete {
 
+    private int id;
     private String destino, estado;
     private double peso, largo, ancho, alto;
     private boolean esUrgente;
 
-    public Paquete(String destino, double peso, boolean esUrgente, double largo, double ancho, double alto, String estado) {
+    public Paquete(int id, String destino, double peso, boolean esUrgente, double largo, double ancho, double alto, String estado) {
+        this.id = id;
         this.destino = destino;
         this.peso = peso;
         this.esUrgente = esUrgente;
@@ -17,6 +19,10 @@ public class Paquete {
     }
 
     ;
+
+    public int getId() {
+        return id;
+    }
 
     public String getDestino() {
         return destino;
