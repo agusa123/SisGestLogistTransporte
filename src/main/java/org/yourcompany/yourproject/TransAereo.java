@@ -5,12 +5,12 @@ public class TransAereo implements Transporte {
     private Paquete paquete;
 
     @Override
-    public void enviarPaquete(Paquete paquete) {
-        System.out.println("Enviando paquete aéreo a " + paquete.getDestino());
+    public void enviarPaquete() {
+        System.out.println("Enviando paquete por transporte aéreo con destino " + paquete.getDestino());
     }
 
     @Override
-    public void mostrarInfoPaquete(Paquete paquete) {
+    public void mostrarInfoPaquete() {
         System.out.println("Información del paquete:");
         System.out.println("Destino: " + paquete.getDestino());
         System.out.println("Peso: " + paquete.getPeso() + " kg");
@@ -20,8 +20,8 @@ public class TransAereo implements Transporte {
     }
 
     @Override
-    public void updateEstadoPaquete(Paquete paquete) {
-        paquete.setEstado("En tránsito");
+    public void updateEstadoPaquete(String estado) {
+        paquete.setEstado(estado);
         System.out.println("Estado del paquete actualizado a: " + paquete.getEstado());
     }
 
